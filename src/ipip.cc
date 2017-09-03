@@ -129,7 +129,7 @@ void ipip_spider_ip::curl_http()
         {
             curl_easy_setopt(curl,CURLOPT_POST,1L);
             curl_easy_setopt(curl,CURLOPT_URL,"http://www.ipip.net/ip.html");
-            curl_easy_setopt(curl,CURLOPT_REFERER,"http://www.ipip.net/ip.html");
+            curl_easy_setopt(curl,CURLOPT_REFERER,"http://www.ipip.net");
             curl_easy_setopt(curl,CURLOPT_POSTFIELDS, post_data);
             curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, len);
             curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
