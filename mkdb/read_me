@@ -1,5 +1,0 @@
-注意事项：
-    本目录下 mk_db.cc文件作用是:将ip文件(ip.txt) 生成ip数据库文件(ip.db)
-    c_search.cc与c_search.hh文件是 c++语言写的查询ip数据库文件(ip.db)的接口函数 
-    c_search_test.cc是一个查询ip的案例
-
