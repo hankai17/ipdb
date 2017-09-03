@@ -13,22 +13,23 @@ int ip138_spider_ip::write_data(char* page_data,size_t size, size_t nmemb,std::s
 }
 
 ip138_spider_ip::ip138_spider_ip(std::string ip_b, std::string ip_e)
+    :ip_begin(ip_b),
+     ip_end(ip_e),
+     buffer(""),
+     current_ip(ip_begin),
+     current_result(""),
+     next_result(""),
+     write_current_data(""),
+     write_next_data(""),
+     write_last_ip(""),
+     pre_ip(""),
+     pre_data("")
 {
     step = 0;
     ip_back = 0;
-    current_result = "";
-    next_result = "";
-    ip_begin = ip_b; 
-    ip_end = ip_e; 
-    current_ip = ip_begin;
     once_flag = 0;
     once1_flag = 0;
-    pre_ip = "";
-    pre_data = "";
 
-    write_current_data = "";
-    write_next_data = "";
-    write_last_ip = "";
     memcpy(User_Agent,"User-Agent: Mozilla/5.0 (Windows NT 6.1; \
         WOW64; rv:52.0) Gecko/20100101 Firefox/52.0", 
             strlen("User-Agent: Mozilla/5.0 (Windows NT 6.1; \
